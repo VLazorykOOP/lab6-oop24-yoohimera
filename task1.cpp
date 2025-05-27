@@ -55,34 +55,34 @@ public:
 
 int main() {
     // === Без virtual ===
-    D1 obj1;
-    obj1.B1::a1 = 1;
-    obj1.b1 = 2;
-    obj1.C1::a1 = 3;
-    obj1.c1 = 4;
-    obj1.d1 = 5;
+    D1 object1;
+    object1.B1::a1 = 1;
+    object1.b1 = 2;
+    object1.C1::a1 = 3;
+    object1.c1 = 4;
+    object1.d1 = 5;
 
-    cout << "=== Без віртуального успадкування ===" << endl;
-    cout << "B1::a1 = " << obj1.B1::a1 << endl;
-    cout << "b1 = " << obj1.b1 << endl;
-    cout << "C1::a1 = " << obj1.C1::a1 << endl;
-    cout << "c1 = " << obj1.c1 << endl;
-    cout << "d1 = " << obj1.d1 << endl;
-    cout << "Розмір об'єкта D1: " << sizeof(obj1) << " байт" << endl;
+    cout << "=== Without virtual inheritance ===" << endl;
+    cout << "B1::a1 = " << object1.B1::a1 << endl;
+    cout << "b1 = " << object1.b1 << endl;
+    cout << "C1::a1 = " << object1.C1::a1 << endl;
+    cout << "c1 = " << object1.c1 << endl;
+    cout << "d1 = " << object1.d1 << endl;
+    cout << "Size of object D1: " << sizeof(object1) << " bytes" << endl;
 
     // === З virtual ===
-    D2 obj2;
-    obj2.a2 = 10;
-    obj2.b2 = 20;
-    obj2.c2 = 30;
-    obj2.d2 = 40;
+    D2 object2;
+    object2.a2 = 10;
+    object2.b2 = 20;
+    object2.c2 = 30;
+    object2.d2 = 40;
 
-    cout << "\n=== З віртуальним успадкуванням ===" << endl;
-    cout << "a2 = " << obj2.a2 << endl;
-    cout << "b2 = " << obj2.b2 << endl;
-    cout << "c2 = " << obj2.c2 << endl;
-    cout << "d2 = " << obj2.d2 << endl;
-    cout << "Розмір об'єкта D2: " << sizeof(obj2) << " байт" << endl;
+    cout << "\n=== With virtual inheritance ===" << endl;
+    cout << "a2 = " << object2.a2 << endl;
+    cout << "b2 = " << object2.b2 << endl;
+    cout << "c2 = " << object2.c2 << endl;
+    cout << "d2 = " << object2.d2 << endl;
+    cout << "Size of object D2: " << sizeof(object2) << " bytes" << endl;
 
     return 0;
 }
